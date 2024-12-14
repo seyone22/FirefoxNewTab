@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #efebff;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 24px 12px;
+
+    margin: 16px 0;
+}
+
+.row .group:not(:last-child) {
+    margin-right: 24px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    width: fit-content;
+}
+
+.link:not(:last-child) {
+    margin-right: 8px;
+}
+
+.link-item {
+    padding: 8px;
+}
+
+.link-item img {
+    width: 36px;
+    height: 36px;
+}
+
+.link-item:hover {
+    background-color: #f3f3f2;
+    border-radius: 10px;
+}
+
+.link-item {
+
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #16141c;
+        color: #ffffff;
+    }
+
+    .group {
+        background-color: #1e1c26;
+    }
+
+    .link-item:hover {
+        background-color: #383544;
+    }
+
+    .github {
+        filter: invert(100%);
+    }
+}
