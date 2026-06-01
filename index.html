@@ -7,6 +7,11 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>New Tab</title>
 
+    <!-- Import Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Link to the external CSS file -->
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -14,7 +19,8 @@
 <body>
 <div class="main">
 
-    <div class="group">
+    <!-- Added data-label="Proton" -->
+    <div class="group" data-label="Proton">
         <a class="link" href="https://mail.proton.me/" data-tooltip="Proton Mail">
             <div class="link-item">
                 <img alt="" src="./assets/protonmail.svg"/>
@@ -49,7 +55,7 @@
 
     <div class="row">
 
-        <div class="group">
+        <div class="group" data-label="Art">
             <a class="link" href="https://www.pixiv.net/" data-tooltip="Pixiv">
                 <div class="link-item">
                     <img alt="" src="./assets/pixiv.svg"/>
@@ -62,7 +68,7 @@
             </a>
         </div>
 
-        <div class="group">
+        <div class="group" data-label="Office">
             <a class="link" href="https://www.office.com/?auth=2" data-tooltip="MS Office">
                 <div class="link-item">
                     <img alt="" src="./assets/office.svg"/>
@@ -70,7 +76,7 @@
             </a>
         </div>
 
-        <div class="group">
+        <div class="group" data-label="Work">
             <a class="link" href="https://uprisedigital.atlassian.net/" data-tooltip="Uprise Jira">
                 <div class="link-item">
                     <img alt="" src="./assets/jira.svg"/>
@@ -81,9 +87,10 @@
                     <img alt="" src="./assets/confluence.svg"/>
                 </div>
             </a>
-            <a class="link" href="https://223597091711.signin.aws.amazon.com/console" data-tooltip="AWS Console">
+            <!-- Swapped AWS for Railway -->
+            <a class="link" href="https://railway.app/" data-tooltip="Railway">
                 <div class="link-item">
-                    <img alt="" src="./assets/aws.svg"/>
+                    <img alt="" src="./assets/railway.svg"/>
                 </div>
             </a>
             <a class="link" href="https://mail.google.com/mail/u/0/#inbox" data-tooltip="Gmail">
@@ -97,7 +104,7 @@
 
     <div class="row">
 
-        <div class="group">
+        <div class="group" data-label="Professional">
             <a class="link" href="https://www.linkedin.com/" data-tooltip="LinkedIn">
                 <div class="link-item">
                     <img alt="" src="./assets/linkedin.svg"/>
@@ -110,7 +117,7 @@
             </a>
         </div>
 
-        <div class="group">
+        <div class="group" data-label="Anime.lk">
             <a class="link" href="https://animelk.atlassian.net/" data-tooltip="Anime.lk Jira">
                 <div class="link-item">
                     <img alt="" src="./assets/jira.svg"/>
@@ -132,7 +139,7 @@
     </div>
 
     <div class="row">
-        <div class="group">
+        <div class="group" data-label="DSMH">
             <a class="link" href="https://dsmh.atlassian.net/" data-tooltip="DSMH Jira">
                 <div class="link-item">
                     <img alt="" src="./assets/jira.svg"/>

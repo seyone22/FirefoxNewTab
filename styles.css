@@ -3,6 +3,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #efebff;
+    /* Added the Inter font fallback stack */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .main {
@@ -18,13 +20,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative; /* Required for the ::before label */
 
     background-color: white;
     border-radius: 8px;
     width: fit-content;
-    padding: 24px 12px;
 
+    /* Adjusted padding to make room for the label at the top */
+    padding: 32px 12px 16px 12px;
     margin: 16px 0;
+}
+
+/* This creates the muted category labels */
+.group::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8c86a3; /* Muted purple-gray */
 }
 
 .row .group:not(:last-child) {
@@ -38,7 +55,7 @@ body {
 
 .link {
     width: fit-content;
-    position: relative; /* Add this to anchor the absolute tooltips */
+    position: relative; /* Added to anchor the absolute tooltips */
 }
 
 .link:not(:last-child) {
@@ -59,15 +76,11 @@ body {
     border-radius: 10px;
 }
 
-.link-item {
-
-}
-
 /* Tooltip styling */
 .link::after {
-    content: attr(data-tooltip); /* Pulls text from the HTML data-tooltip attribute */
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 110%; /* Positions it above the icon */
+    bottom: 110%;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -75,16 +88,16 @@ body {
     padding: 6px 10px;
     border-radius: 6px;
     font-size: 12px;
-    font-family: sans-serif;
+    /* Removed the sans-serif override so it inherits Inter */
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, transform 0.2s ease;
-    pointer-events: none; /* Prevents the tooltip from interfering with clicks */
+    pointer-events: none;
     z-index: 100;
 }
 
-/* Tooltip Arrow (Optional) */
+/* Tooltip Arrow */
 .link::before {
     content: "";
     position: absolute;
@@ -117,6 +130,11 @@ body {
 
     .group {
         background-color: #1e1c26;
+    }
+
+    /* Dark mode label text color */
+    .group::before {
+        color: #65617a;
     }
 
     .link-item:hover {
