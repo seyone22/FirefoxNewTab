@@ -38,6 +38,7 @@ body {
 
 .link {
     width: fit-content;
+    position: relative; /* Add this to anchor the absolute tooltips */
 }
 
 .link:not(:last-child) {
