@@ -189,7 +189,8 @@ body {
         color: #ffffff;
     }
 
-    .github {
+    .github,
+    .resend {
         filter: invert(100%);
     }
 
