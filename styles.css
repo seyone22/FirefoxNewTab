@@ -93,6 +93,11 @@ body {
     transition: transform 0.2s ease;
 }
 
+.resend {
+    width: 30px;
+    height: 30px;
+}
+
 .railway-logo {
     color: #000000;
     fill: currentColor;
