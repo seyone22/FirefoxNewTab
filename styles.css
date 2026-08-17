@@ -93,9 +93,9 @@ body {
     transition: transform 0.2s ease;
 }
 
-.resend {
-    width: 30px;
-    height: 30px;
+.link-item .resend {
+    width: 24px;
+    height: 24px;
 }
 
 .railway-logo {
@@ -256,6 +256,11 @@ body {
     .railway-logo {
         width: 32px;
         height: 32px;
+    }
+
+    .link-item .resend {
+        width: 21px;
+        height: 21px;
     }
 
     .group::before {
